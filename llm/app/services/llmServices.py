@@ -162,4 +162,4 @@ def get_conversational_answer(query_text, chat_history):
     """
 
     response = model.generate_content(prompt)
-    return {'answer': response.text, 'sources': sources}
+    return {'answer': response.text, 'sources': sources, 'success': True}

@@ -61,11 +61,11 @@ def upload_file():
             print("Successfully added chunks to doc_collection.")
             os.remove(filepath)
             
-            return jsonify({'message': f'File processed and embedded successfully. {len(chunks)} chunks added.'})
+            return jsonify({'success': True, 'message': f'File processed and embedded successfully. {len(chunks)} chunks added.'})
 
         except Exception as e:
             print(f"Error during processing: {e}")
-            return jsonify({'error': str(e)}), 500
+            return jsonify({'success': False, 'message': str(e)}), 500
   
   
 @main.route('/ask', methods=['POST'])
