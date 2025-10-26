@@ -14,7 +14,7 @@ const app = express();
 
 // ----------------- MIDDLEWARE -----------------
 app.use(cors({
-  origin: ["https://diorthotic-photospectroscopical-ahmed.ngrok-free.dev"],
+  origin: ["https://diorthotic-photospectroscopical-ahmed.ngrok-free.dev", "http://localhost:3000"],
   credentials: true,
 }));
 
